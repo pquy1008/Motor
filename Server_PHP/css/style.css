@@ -1,0 +1,69 @@
+/*Reset*/
+html, body {
+	padding: 0;
+	margin: 0;
+}
+
+/*For development*/
+div {
+	/*border: thin solid green;*/
+}
+
+/*Real code*/
+.status1, .status2 {
+	line-height: 1.2em;
+	width: 45px;
+	background-color: green;
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	z-index: 100;
+	color: white;
+	text-align: center;
+	font-size: 0.75em;
+}
+
+.status2 {
+	left: 60px;
+	width: 20px;
+}
+
+.container {
+	width: 100%;
+	height: 100vh;
+	background-color: lightgray;
+	position: relative;
+}
+
+.leftcontrol, .rightcontrol {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	margin-top: -75px;
+	border: thin solid gray;
+}
+
+.leftpoint, .rightpoint {
+    width: 50px;
+    height: 50px;
+    background-color: slategray;
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    left: 50%;
+    margin-left: -25px;
+    border-radius: 50%;
+}
+
+.rightcontrol {
+	right: 0;
+}
+
+.videoframe {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background-color: lightblue;
+}
