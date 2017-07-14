@@ -11,18 +11,28 @@ function handler(req, res) {
 }
 
 // Socket server
+var sockets = []
 io.on('connection', function(socket) {
 	console.log('connected');
+	sockets.push(socket)
+
+	var index = sockets.indexOf(socket)
 
 	// Receve a request for change camera possion
 	socket.on('move_camera', function(data) {
 		console.log('move camera');
 		console.log(data);
+		socket.emit('move_camera', data);
 	})
 
 	// Receive a request for change direction
 	socket.on('move_direction', function(data) {
 		console.log('move direction');
 		console.log(data);
+		socket.emit('move_direction', data);
+	})
+
+	socket.on('disconnect', function() {
+		console.log('disconnected');
 	})
 })

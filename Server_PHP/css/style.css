@@ -11,7 +11,7 @@ div {
 }
 
 /*Real code*/
-.status1, .status2 {
+.status1, .status2, .status3 {
 	line-height: 1.2em;
 	width: 55px;
 	background-color: red;
@@ -28,6 +28,13 @@ div {
 .status2 {
 	left: 70px;
 	width: 25px;
+}
+
+.status3 {
+    left: 100px;
+    width: 70px;
+    background-color: white;
+    color: black;
 }
 
 .container {

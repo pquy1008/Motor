@@ -23,11 +23,6 @@ socket.on('connect', function(data) {
 		}
 	})
 
-	// Reset
-	// $('#leftpoint').doubletap(function() {
-	// 	console.log('double tap');
-	// })
-
 	// CONTROL DIRECTION
 	var direction = {x: 0, y: 0}
 
@@ -43,6 +38,20 @@ socket.on('connect', function(data) {
 			direction = {x: x, y: y}
 			socket.emit('move_direction', direction)
 		}
+	})
+
+	socket.on('move_camera', function(data) {
+		let left = data.x + 75
+		let top = -data.y + 75
+		console.log(data);
+		$('#leftpoint').css({left: left, top: top});
+	})
+
+	socket.on('move_direction', function(data) {
+		let left = data.x + 75
+		let top = -data.y + 75
+		console.log(data);
+		$('#rightpoint').css({left: left, top: top});
 	})
 })
 

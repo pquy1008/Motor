@@ -14,6 +14,7 @@
 <body>
 	<div class="status1">server</div>
 	<div class="status2">pi</div>
+	<div class="status3">view mode</div>
 
 	<div class="container">
 		<div class="leftcontrol">
