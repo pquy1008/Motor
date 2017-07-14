@@ -17,12 +17,12 @@
 
 	<div class="container">
 		<div class="leftcontrol">
-			<div class="leftpoint">
+			<div id="leftpoint">
 			</div>
 		</div>
 
 		<div class="rightcontrol">
-			<div class="rightpoint">
+			<div id="rightpoint">
 			</div>
 		</div>
 
@@ -30,15 +30,7 @@
 		</div>
 	</div>
 
-	<script>
-	$(".leftpoint, .rightpoint").draggable();
-
-	$(".leftpoint, .rightpoint").on("touchstart", function(e) {
-		$(".status").html(e.touches.length);
-		console.log(e.touches.length);
-	})
-
-	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.5/socket.io.min.js"></script>
+	<script src="js/socket-client.js"></script>
 </body>
-
 </html>
