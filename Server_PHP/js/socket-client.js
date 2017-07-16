@@ -1,4 +1,4 @@
-var socket = io('http://192.168.0.212:8080');
+var socket = io('http://raspberrypi.mshome.net:8080');
 
 // SOCKET is connected
 socket.on('connect', function(data) {
@@ -43,14 +43,12 @@ socket.on('connect', function(data) {
 	socket.on('move_camera', function(data) {
 		let left = data.x + 75
 		let top = -data.y + 75
-		console.log(data);
 		$('#leftpoint').css({left: left, top: top});
 	})
 
 	socket.on('move_direction', function(data) {
 		let left = data.x + 75
 		let top = -data.y + 75
-		console.log(data);
 		$('#rightpoint').css({left: left, top: top});
 	})
 })

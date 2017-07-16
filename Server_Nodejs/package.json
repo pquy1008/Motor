@@ -10,6 +10,10 @@
   "license": "ISC",
   "dependencies": {
     "http": "0.0.0",
+    "pigpio": "^0.6.1",
+    "raspi": "^4.0.0",
+    "raspi-pwm": "^4.0.2",
+    "rpi-gpio": "^0.8.1",
     "socket.io": "^2.0.3"
   }
 }
